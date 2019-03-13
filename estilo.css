@@ -1,1 +1,296 @@
-*{margin:0;padding:0;box-sizing:border-box;outline:0}a{text-decoration:none}body{font-family:"Fira Sans",sans-serif;padding:2em;transition:all 300ms ease-in-out;color:#404040}body .container{margin:0 auto}body .container .bighead{margin-top:3em}body .container .bighead .bighead__title{font-size:2em;font-weight:700;display:inline-block}body .container .bighead .bighead__subtitle{font-weight:400;font-size:1em;display:inline-block}body .container .bighead .bighead__content{display:inline-block;vertical-align:middle}body .container .bighead .bighead__content .footer__social{list-style-type:none;margin-top:1em}body .container .bighead .bighead__content .footer__social .social__item{display:inline-block;vertical-align:middle;line-height:0;margin-right:10px;padding-bottom:3px;text-decoration:none}body .container .bighead .bighead__content .footer__social .social__item .social__link{transition:all 300ms ease-in-out;border-bottom:2px solid transparent}body .container .bighead .bighead__content .footer__social .social__item .social__link svg{width:30px;fill:#404040}body .container .bighead .bighead__content .footer__social .social__item .social__link:active,body .container .bighead .bighead__content .footer__social .social__item .social__link:focus,body .container .bighead .bighead__content .footer__social .social__item .social__link:hover{border-bottom-color:#840000}
+@font-face {
+    font-family: "Fira Sans";
+    src: url("fonts/FiraSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Fira Sans";
+    src: url("fonts/FiraSans-Light.ttf") format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Fira Sans";
+    src: url("fonts/FiraSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	outline: 0;
+}
+
+body, html {
+  height: 100%;
+}
+
+body {
+	font-family: "Fira Sans", sans-serif;
+	font-size: 1em;
+	background-color: #f0f0f0;
+	animation: appear 0.5s ease-in-out 0s;
+	/*color: #1c2833;*/
+}
+
+.container {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.header {
+	height: 50px;
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+.header__list {
+	list-style-type: none;
+}
+
+.header__item {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 1em;
+}
+
+.header__link {
+	color: #000;
+	text-decoration: none;
+	position: relative;
+	font-size: 1.25em;
+	font-weight: 300;
+}
+
+.header__link:after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 5%;
+	width: 90%;
+	height: 2px;
+	background: transparent;
+	transition: bottom 250ms cubic-bezier(.68,-0.55,.27,1.55), background 250ms linear;
+}
+
+.header__link:hover:after, .header__link:focus:after {
+	bottom: -3px;
+	background: blue;
+}
+
+.main, .picture {
+	text-align: center;
+	width: 100%;
+	max-width: 960px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.image {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 10px solid #f0f0f0;
+	margin-bottom: 1em;
+	background-color: #dda692;
+}
+
+.line {
+	width: 50%;
+	z-index: -1;
+	position: absolute;
+	top: 55px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	height: 2px;
+	background-color: #C0C0C0;
+}
+
+
+.main__content {
+	width: 50%;
+	margin: 0 auto;
+	text-align: left;
+	margin-bottom: 4em;
+}
+
+.main__title {
+	font-size: 2.5em;
+	margin-bottom: 0.2em;
+}
+
+.main__description {
+	line-height: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.footer__social {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	order: 2;
+}
+
+.footer__social svg {
+	width: 32px;
+	height: 32px;
+	padding: 3px;
+	border: 2px solid transparent;
+	border-radius: 50%;
+	transition: border-color 250ms cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.about__timeline {
+	width: 75%;
+	margin: 0 auto;
+	text-align: left;
+	margin-bottom: 5em;
+}
+
+.about__year {
+	font-size: 1.2em;
+	font-weight: 700;
+}
+
+.social__link {
+	margin-right: 16px;
+}
+
+.social__link:last-child {
+	margin-right: 0;
+}
+
+.social__link:hover svg, .social__link:focus svg{
+	border-color: blue;
+}
+
+.projects__title {
+	font-size: 1.5em;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 0.5em;
+}
+
+.projects__cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.card {
+	width: 48%;
+	border: 1px solid #C0C0C0;
+	border-radius: 0.5em;
+	box-shadow: 2px 2px 5px #C0C0C0;
+	overflow: hidden;
+	text-align: left;
+	margin-bottom: 2em;
+}
+
+.card img {
+	width: 100%;
+}
+
+.card__info {
+	padding: 1em;
+	border-bottom: 1px solid #C0C0C0;
+}
+
+.card__title {
+	font-size: 1.2em;
+	margin-bottom: 0.3em;
+}
+
+.card__description {
+	font-size: 0.9em;
+}
+
+.card__actions {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.actions__link {
+	padding: 1em;
+	width: 50%;
+	text-align: center;
+	transition: background-color 200ms ease-in-out;
+	text-decoration: none;
+}
+
+.actions__link:first-child {
+	border-right: 1px solid #C0C0C0;
+}
+
+.actions__link:hover, .actions__link:focus {
+	background-color: blue;
+	color: white;
+}
+
+.actions__link:active {
+	background-color: darkblue;
+}
+
+.inactive {
+	display: none;
+}
+
+.footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1em 2em;
+	border-top: 1px solid #C0C0C0;
+	font-size: 0.8em;
+}
+
+.footer__made {
+	order: 1;
+}
+
+.footer__priv {
+	order: 3;
+}
+
+@media (max-width: 1024px) {
+	.projects {padding: 2em;}
+}
+
+@media (max-width: 800px) {
+	.main__content {width: 75%;}
+	.line {width: 75%;}
+	.footer {flex-direction: column;}
+	.footer__social {order: 1; margin-bottom: 0.5em;}
+	.footer__made {order: 2; margin-bottom: 0.5em;}
+	.footer__priv {order: 3;}
+}
+
+@media (max-width: 600px) {
+	.projects {padding: 0 1em;}
+	.projects__cards {flex-direction: column;}
+	.card {width: 100%;}
+}
+
+@media (max-width: 400px) {
+	.header {margin-bottom: 0;}
+	.header__item {font-size: 0.8em;}
+	.main__title {font-size: 2em;}
+	.main__description {font-size: 0.9em;}
+}
+
+@keyframes appear {
+  0% {
+  	opacity: 0;
+  }
+  100% {
+    opacity: 1;
+}

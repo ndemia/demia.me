@@ -18,6 +18,9 @@
 			<nav class="header__menu">
 				<ul class="header__list">
 					<li class="header__item">
+						<a class="header__link" href="index.html">Index</a>
+					</li>
+					<li class="header__item">
 						<a class="header__link" href="about.html">About me</a>
 					</li>
 					<li class="header__item">
@@ -30,17 +33,33 @@
 			</nav>
 		</header>
 
-		<!-- Content -->
+		<!-- Projects -->
 		<section class="main">
-			<div class="picture">
-				<img class="image" src="images/de-costado-1x.jpg" alt="The website's owner" />
-				<div class="line"></div>
-			</div>
-			<section class="main__content">
-				<h1 class="main__title">Hi, I am Nicolás!</h1>
-				<p class="main__description">I am designer with great passion and curiosity for anything web related. I ❤️ the web and care about the users.</p>
-				<p class="main__description">I'm working to improve my knowledge in front-end development: semantics, accessibility, open source and JS, among other subjects. I want to explore SVG animations and data visualization too.</p>
-				<p class="main__description">This website is currently under construction and I will be adding more of the things I do in the coming weeks. Thanks for stopping by!</p>
+			<section class="projects">
+				<div class="projects__cards">
+					<div class="card">
+						<img src="images/1_chat.png" />
+						<article class="card__info">
+							<h3 class="card__title">Chat</h3>
+							<p class="card__description">Simple, minimal and responsive chat.</p>
+						</article>
+						<div class="card__actions">
+							<a class="actions__link" href="work/1_chat/index.html" target="_blank">View demo</a>
+							<a class="actions__link" href="https://codepen.io/ndemia/pen/KZxwpW" target="_blank" rel="noopener nofollow">View code</a>
+						</div>
+					</div>
+					<div class="card">
+						<img src="images/2_signUp.png" />
+						<article class="card__info">
+							<h3 class="card__title">Sign up / Log in</h3>
+							<p class="card__description">Coming soon.</p>
+						</article>
+						<div class="card__actions inactive">
+							<a class="actions__link" href="" target="_blank">View demo</a>
+							<a class="actions__link" href="" target="_blank" rel="noopener nofollow">View code</a>
+						</div>
+					</div>
+				</div>
 			</section>
 		</section>
 
@@ -110,7 +129,7 @@
 			<span class="footer__priv">This website doesn't track you 😇</span>
 		</footer>
 
-	</div> 
+</div>
 
 </body>
 </html>
