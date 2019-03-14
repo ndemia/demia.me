@@ -1,20 +1,4 @@
-@font-face {
-    font-family: "Fira Sans";
-    src: url("fonts/FiraSans-Bold.ttf") format("truetype");
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: "Fira Sans";
-    src: url("fonts/FiraSans-Light.ttf") format("truetype");
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: "Fira Sans";
-    src: url("fonts/FiraSans-Regular.ttf") format("truetype");
-    font-weight: 400;
-}
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,700');
 
 * {
 	margin: 0px;
@@ -32,7 +16,7 @@ body {
 	font-size: 1em;
 	background-color: #f0f0f0;
 	animation: appear 0.5s ease-in-out 0s;
-	/*color: #1c2833;*/
+	color: #1c2833;
 }
 
 .container {
@@ -59,11 +43,15 @@ body {
 }
 
 .header__link {
-	color: #000;
+	color: #1c2833;
 	text-decoration: none;
 	position: relative;
 	font-size: 1.25em;
 	font-weight: 300;
+}
+
+.header__link--active {
+	font-weight: 700;
 }
 
 .header__link:after {
