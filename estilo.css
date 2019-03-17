@@ -134,16 +134,13 @@ body {
 	transition: border-color 250ms cubic-bezier(.68,-0.55,.27,1.55);
 }
 
-.about__timeline {
-	width: 75%;
-	margin: 0 auto;
-	text-align: left;
-	margin-bottom: 5em;
+.about__year {
+	font-size: 1.1em;
+	font-weight: 700;
 }
 
-.about__year {
-	font-size: 1.2em;
-	font-weight: 700;
+.about__description {
+	font-size: 0.9em;
 }
 
 .social__link {
@@ -198,6 +195,11 @@ body {
 
 .card__description {
 	font-size: 0.9em;
+	margin-bottom: 0.5em;
+}
+
+.card__description:last-child {
+	margin-bottom: 0;
 }
 
 .card__actions {

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Sign up / Log in</title>
+</head>
+
+<body>
+	<!-- Container -->
+	<section class="user-access">
+
+		<!-- Navigation -->
+		<nav class="user-access__nav">
+			<button id="nav__signUp" class="nav--sign nav__active" type="button">Sign up</button>
+			<button id="nav__logIn" class="nav--log nav__inactive nav--log--inactive" type="button">Log in</button>
+		</nav>
+
+		<!-- Sign up view -->
+		<section id="access--signUp" class="access--signUp main__active">
+			<article><h2>Create your new account</h2></article>
+			<form action="" method="" class="signUp--form">
+				<fieldset>
+					<div class="input--left">
+						<label for="first_name"><span>First name</span></label>
+						<input type="text" id="first_name" name="user_fname" autocomplete="off" required>
+					</div>
+					<div class="input--right">
+						<label for="last_name"><span>Last name</span></label>
+						<input type="text" id="last_name" name="user_lname" autocomplete="off" required>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div>
+						<label for="mail"><span>E-mail</span></label>
+						<input type="email" id="mail" name="user_mail" autocomplete="off" required>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div>
+						<label for="password"><span>Password</span></label>
+						<input type="password" id="password" name="user_password" autocomplete="off" required>
+					</div>
+				</fieldset>
+				<div class="signUp--disclaimer">
+					<p>By signing up, you agree to our <a href="#0" class="link">Terms of Service</a> and <a href="#0" class="link">Privacy Policy</a>.</p>
+					<button class="btn btn_primary" type="reset">Sign up</button>
+				</div>
+			</form>
+			<footer class="signUp--footer">
+				<button class="btn btn_secondary"><div class="button--content"><img src="images/facebook.svg" alt="Facebook logo" />Sign up with Facebook</div></button>
+				<button class="btn btn_secondary"><div class="button--content"><img src="images/google.svg" alt="Google logo" />Sign up with Google</div></button>
+			</footer>
+		</section>
+
+		<!-- Log in view -->
+		<section id="access--logIn" class="access--logIn main__inactive">
+			<article><h2>Welcome back</h2></article>
+			<form action="" method="" class="signUp--form">
+				<fieldset>
+					<div>
+						<label for="mail"><span>E-mail</span></label>
+						<input type="email" id="mail" name="user_mail" autocomplete="off" required>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div>
+						<label for="password"><span>Password</span></label>
+						<input type="password" id="password" name="user_password" autocomplete="off" required>
+					</div>
+				</fieldset>
+				<div class="signUp--disclaimer">
+					<button class="btn btn_primary" type="reset">Log in</button>
+				</div>
+			</form>
+			<footer class="signUp--footer">
+				<button class="btn btn_secondary"><div class="button--content"><img src="images/facebook.svg" alt="Facebook logo" />Log in with Facebook</div></button>
+				<button class="btn btn_secondary"><div class="button--content"><img src="images/google.svg" alt="Google logo" />Log in with Google</div></button>
+			</footer>
+		</section>
+
+	</section>
+</body>
+
+<script src="signup.js"></script>
+</html>
