@@ -181,6 +181,7 @@ body {
 
 .card img {
 	width: 100%;
+	border-bottom: 1px solid #C0C0C0;
 }
 
 .card__info {
@@ -191,6 +192,7 @@ body {
 .card__title {
 	font-size: 1.2em;
 	margin-bottom: 0.3em;
+	text-align: center;
 }
 
 .card__description {
@@ -214,6 +216,10 @@ body {
 	text-align: center;
 	transition: background-color 200ms ease-in-out;
 	text-decoration: none;
+}
+
+.actions__link:visited {
+	color: inherit;
 }
 
 .actions__link:first-child {
@@ -247,9 +253,6 @@ body {
 	order: 1;
 }
 
-.footer__priv {
-	order: 3;
-}
 
 @media (max-width: 1024px) {
 	.projects {padding: 2em;}
@@ -258,10 +261,9 @@ body {
 @media (max-width: 800px) {
 	.main__content {width: 75%;}
 	.line {width: 75%;}
-	.footer {flex-direction: column;}
+	.footer {flex-direction: column; justify-content: unset;}
 	.footer__social {order: 1; margin-bottom: 0.5em;}
-	.footer__made {order: 2; margin-bottom: 0.5em;}
-	.footer__priv {order: 3;}
+	.footer__made {order: 2; margin-bottom: 1em;}
 }
 
 @media (max-width: 600px) {
