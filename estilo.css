@@ -85,8 +85,12 @@ body {
 	background-color: #dda692;
 	border-radius: 0;
 	cursor: pointer;
-	box-shadow: 5px 5px 10px #808080;
+	box-shadow: 3px 3px 5px #808080;
 	transition: all 250ms cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+.image:hover, .image:active, .image:focus {
+	box-shadow: 5px 5px 10px #808080;
 }
 
 .main__content {
@@ -240,6 +244,13 @@ body {
 	background-color: blue;
 	color: white;
 }
+
+/* @media screen and (prefers-color-scheme: dark) {
+body {
+	background:#19191a;
+  	color:#c8d0dc;
+  }
+} */
 
 
 @media (max-width: 1024px) {
