@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+
+
+
+// Variables
+$primary-color: #0065f3;
+$white: #f0f0f0;
+$light-gray: #C0C0C0;
+$medium-gray: #808080;
+$black: #1c2833;
+
+
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	outline: 0;
+	transition: all 250ms cubic-bezier(.68,-0.55,.27,1.55);
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+	font-family: "Inconsolata", monospace;
+	font-size: 1em;
+	animation: appear 1s ease-in-out 0s;
+	color: $black;
+}
+
+.container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	.main {
+		width: 100%;
+		max-width: 960px;
+		text-align: center;
+		&__picture {
+			margin-bottom: 1em;
+			background-color: #dda692;
+			border-radius: 0;
+			cursor: pointer;
+			box-shadow: 1px 1px 5px $medium-gray;
+			&:hover, &:active, &:focus {
+				box-shadow: 5px 5px 10px $medium-gray;
+			}
+		}
+		&__content {
+			width: 50%;
+			margin: 0 auto;
+			text-align: left;
+			margin-bottom: 4em;
+			@media (max-width: 800px) {
+				width: 75%;
+			}
+		}
+		&__title {
+			font-size: 2.5em;
+			margin-bottom: 0.2em;
+		}
+		&__description {
+			line-height: 1.5em;
+			margin-bottom: 1.5em;
+		}
+	}
+	.social {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		&__link {
+			margin-right: 16px;
+			&:last-child {
+				margin-right: 0;
+			}
+			&:hover, &:focus, &:active {
+				svg {
+					border-color: $primary-color;
+				}
+			} 
+			svg {
+				width: 32px;
+				height: 32px;
+				padding: 3px;
+				border: 2px solid transparent;
+				border-radius: 50%;
+			}
+		}
+	}
+	.footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 1em 2em;
+		border-top: 1px solid $light-gray;
+		font-size: 0.8em;
+		&__text {
+			margin-bottom: 1em;
+		}
+	}
+}
+
+@keyframes appear {
+  0% {
+  	opacity: 0;
+  }
+  100% {
+    opacity: 1;
+	}
+}
