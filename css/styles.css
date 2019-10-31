@@ -108,6 +108,15 @@ body {
   margin-bottom: 1em;
 }
 
+.container .footer__link {
+  padding: 0.5em;
+}
+
+.container .footer__link:hover, .container .footer__link:focus, .container .footer__link:active {
+  background-color: #0065f3;
+  color: #f0f0f0;
+}
+
 @keyframes appear {
   0% {
     opacity: 0;
