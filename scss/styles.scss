@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
 
 
-
 // Variables
 $primary-color: #0065f3;
 $white: #f0f0f0;
@@ -10,13 +9,12 @@ $medium-gray: #808080;
 $black: #1c2833;
 
 
-
 * {
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
 	outline: 0;
-	transition: all 250ms cubic-bezier(.68,-0.55,.27,1.55);
+	transition: all 150ms linear;
 }
 
 body, html {

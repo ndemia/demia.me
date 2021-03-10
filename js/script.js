@@ -26,6 +26,8 @@ const newImageBorder = function () {
 
 // Add new border radius to the image on page load
 document.addEventListener('DOMContentLoaded', newImageBorder);
+
+
 // Event listener to listen for clicks in the image and change its shape
 document.querySelector('.main__picture').addEventListener('click', newImageBorder);
 
