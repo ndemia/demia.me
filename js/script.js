@@ -9,7 +9,7 @@ const checkDarkMode = function () {
 
 	// If dark true, show white favicon
 	if (isDark) {
-		favicon.href = 'images/white/favicon-32x32.png';
+		favicon.href = 'assets/favicons/white/favicon-32x32.png';
 	}
 };
 
