@@ -1,7 +1,40 @@
 @use 'abstracts/colors' as *;
-@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@400;700&family=Work+Sans:wght@400;700&display=swap');
 
-* {
+@font-face {
+	font-family: "Bitter";
+	src: url("../fonts/Bitter-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Bitter";
+	src: url("../fonts/Bitter-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Work Sans";
+	src: url("../fonts/WorkSans-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Work Sans";
+	src: url("../fonts/WorkSans-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+*,
+*::before,
+*::after {
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
@@ -9,7 +42,7 @@
 }
 
 body {
-	font-family: 'Bitter', 'Georgia', serif;
+	font-family: "Bitter", "Georgia", serif;
 	font-size: 1rem;
 	line-height: 1.5;
 	color: $color5;
@@ -121,6 +154,7 @@ body {
 			font-size: 3rem;
 			line-height: 1;
 			margin-bottom: 0.75rem;
+			font-weight: 700;
 
 
 			@media (min-width: 768px) {
