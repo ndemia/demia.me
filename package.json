@@ -1,0 +1,23 @@
+{
+  "name": "demia.me",
+  "version": "1.0.0",
+  "description": "My personal website.",
+  "main": "index.js",
+  "scripts": {
+    "sass-dev": "sass --watch --update --style=compressed --no-source-map scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndemia/demia.me.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ndemia/demia.me/issues"
+  },
+  "homepage": "https://github.com/ndemia/demia.me#readme",
+  "devDependencies": {
+    "sass": "^1.51.0"
+  }
+}
