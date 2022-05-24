@@ -1,17 +1,17 @@
-// Change favicon according to theme
-const checkDarkMode = function () {
+// // Change favicon according to theme
+// const checkDarkMode = function () {
 
-	// In case browser's dark theme is enabled, returns boolean
-	let isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+// 	// In case browser's dark theme is enabled, returns boolean
+// 	let isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-	// Reference to the favicon in the html
-	let favicon = document.querySelector('link[rel="icon"]');
+// 	// Reference to the favicon in the html
+// 	let favicon = document.querySelector('link[rel="icon"]');
 
-	// If dark true, show white favicon
-	if (isDark) {
-		favicon.href = 'assets/favicons/white/favicon-32x32.png';
-	}
-};
+// 	// If dark true, show white favicon
+// 	if (isDark) {
+// 		favicon.href = 'assets/favicons/white/favicon-32x32.png';
+// 	}
+// };
 
 
 // Get book and music information to display in the footer
@@ -35,5 +35,5 @@ const updateBooksAndMusic = function () {
 
 
 // Event listeners
-document.addEventListener('DOMContentLoaded', checkDarkMode);
+//document.addEventListener('DOMContentLoaded', checkDarkMode);
 document.addEventListener('DOMContentLoaded', updateBooksAndMusic);
