@@ -45,8 +45,8 @@ body {
 	font-family: "Bitter", "Georgia", serif;
 	font-size: 1rem;
 	line-height: 1.5;
-	color: $color5;
-	background-color: $color1;
+	color: $color-five;
+	background-color: $color-one;
 }
 
 
@@ -78,8 +78,8 @@ body {
 		display: flex;
 		flex-direction: row;
 		margin-bottom: 1.5rem;
-		border-top: 1px solid $color5;
-		border-bottom: 1px solid $color5;
+		border-top: 1px solid $color-five;
+		border-bottom: 1px solid $color-five;
 
 
 		@media (min-width: 768px) {
@@ -103,12 +103,12 @@ body {
 		&__item {
 			flex-grow: 1;
 			text-align: center;
-			border-right: 1px solid $color5;
+			border-right: 1px solid $color-five;
 		}
 
 
 		&__item:first-child {
-			border-left: 1px solid $color5;
+			border-left: 1px solid $color-five;
 		}
 
 
@@ -119,13 +119,13 @@ body {
 			justify-content: center;
 			padding: 0.25rem 0;
 			font-family: 'Work Sans', sans-serif;
-			color: $color5;
+			color: $color-five;
 			text-decoration: none;
 
 
 			&:hover, &:focus {
-				background-color: $color3;
-				color: $color5;	
+				background-color: $color-three;
+				color: $color-five;	
 			}
 
 
@@ -138,15 +138,15 @@ body {
 
 
 		&__link--active {
-			background-color: $color4;
-			color: $color1;
+			background-color: $color-four;
+			color: $color-one;
 		}
 	}
 
 	.header {
 		grid-area: header;
 		padding: 1rem 0 1rem 0;
-		border-bottom: 1px solid $color5;
+		border-bottom: 1px solid $color-five;
 
 
 		&__title {
@@ -217,12 +217,13 @@ body {
 	.footer {
 		grid-area: footer;
 		padding: 1rem 0;
-		border-top: 1px solid $color5;
+		border-top: 1px solid $color-five;
+		font-size: 0.9rem;
 
 
 		&__item-container {
 			margin-bottom: 0.5rem;
-			color: $color4;
+			color: $color-four;
 		}
 
 
