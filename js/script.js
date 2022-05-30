@@ -6,7 +6,7 @@ const checkDarkMode = function () {
 
 	// If dark true, show white favicon
 	if (isDark) {
-		document.querySelector('link[rel="icon"]').href = 'favicon-white.svg';
+		document.querySelector('link[type="image/svg+xml"]').href = 'favicon-white.svg';
 	}
 };
 
@@ -79,5 +79,5 @@ const updateBooksAndMusic = function () {
 
 }
 
-document.addEventListener('DOMContentLoaded', checkDarkMode);
-document.addEventListener('DOMContentLoaded', updateBooksAndMusic);
+document.addEventListener('DOMContentLoaded', checkDarkMode());
+document.addEventListener('DOMContentLoaded', updateBooksAndMusic());
