@@ -188,7 +188,7 @@ body {
 
 
 		&__list {
-			padding-left: 3rem;
+			padding-left: 2rem;
 
 			&--links {
 				margin-top: 0.5rem;
@@ -287,8 +287,9 @@ body {
 	}
 
 	&.resume {
-		grid-template-rows: repeat(7, min-content);
-		grid-template-areas:
+		@media (min-width: 768px) {
+			grid-template-rows: repeat(7, min-content);
+			grid-template-areas:
 			"navigation navigation"
 			"header header"
 			"description description"
@@ -296,10 +297,12 @@ body {
 			"education education"
 			"skills skills"
 			"footer footer";
+		}
 
 		.description__list {
-			display: inline-flex;
 			padding-left: 0;
+			display: inline-flex;
+			flex-wrap: wrap;
 		}
 
 		.description__item {
@@ -317,7 +320,6 @@ body {
 
 			&__section {
 				margin-bottom: 2rem;
-
 			}
 
 			&__header {
@@ -340,9 +342,14 @@ body {
 			
 			&__details {
 				display: flex;
+				flex-direction: column;
 				justify-content: space-between;
-				align-items: top;
+				align-items: start;
 				margin-bottom: 0.35rem;
+
+				@media (min-width: 512px) {
+					flex-direction: row;
+				}
 			}
 
 			&__dates {
