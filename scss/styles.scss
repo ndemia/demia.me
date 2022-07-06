@@ -128,13 +128,6 @@ body {
 				background-color: $color-three;
 				color: $color-five;	
 			}
-
-
-			svg {
-				width: 1rem;
-				height: 1rem;
-				margin-left: 0.35rem;
-			}
 		}
 
 
@@ -154,7 +147,7 @@ body {
 			font-family: 'Work Sans', sans-serif;
 			font-size: 3rem;
 			line-height: 1;
-			margin-bottom: 0.75rem;
+			//margin-bottom: 0.75rem;
 			font-weight: 700;
 
 
@@ -289,6 +282,75 @@ body {
 				width: 100%;
 				min-height: 480px;
 				margin-top: 1rem;
+			}
+		}
+	}
+
+	&.resume {
+		grid-template-rows: repeat(7, min-content);
+		grid-template-areas:
+			"navigation navigation"
+			"header header"
+			"description description"
+			"experience experience"
+			"education education"
+			"skills skills"
+			"footer footer";
+
+		.description__list {
+			display: inline-flex;
+			padding-left: 0;
+		}
+
+		.description__item {
+			margin-right: 1rem;
+		}
+
+		.description__link svg {
+			width: 1rem;
+			height: 1rem;
+			margin-right: 0.3rem;
+			color: $color-five;
+		}
+
+		.experience {
+
+			&__section {
+				margin-bottom: 2rem;
+
+			}
+
+			&__header {
+				display: flex;
+				margin-bottom: 1rem;
+				text-transform: uppercase;
+				letter-spacing: 0.1rem;
+	
+				&::after {
+					content: "";
+					display: inline-flex;
+					align-self: center;
+					width: 100%;
+					height: 1px;
+					background-color: $color-five;
+					margin-left: 0.5rem;
+				}
+			}
+
+			
+			&__details {
+				display: flex;
+				justify-content: space-between;
+				align-items: top;
+				margin-bottom: 0.35rem;
+			}
+
+			&__dates {
+				font-weight: 700;
+			}
+
+			&__achievements {
+				padding-left: 1.5rem;
 			}
 		}
 	}
