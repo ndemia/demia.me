@@ -190,6 +190,7 @@ body {
 		&__list {
 			padding-left: 2rem;
 
+
 			&--links {
 				margin-top: 0.5rem;
 				list-style-type: none;
@@ -249,7 +250,7 @@ body {
 				margin-bottom: unset;
 			}
 
-			
+
 			&__photo {
 				margin: 0 2rem 1rem 0;
 				float: left;
@@ -272,6 +273,7 @@ body {
 					border: 1px solid $color-five;
 					background-color: $color-two;
 				}
+
 
 				&:hover::after {
 					background-color: $color-three;
@@ -339,9 +341,11 @@ body {
 
 		.experience {
 
+
 			&__section {
 				margin-bottom: 2rem;
 			}
+
 
 			&__header {
 				display: flex;
@@ -349,6 +353,7 @@ body {
 				text-transform: uppercase;
 				letter-spacing: 0.1rem;
 	
+
 				&::after {
 					content: "";
 					display: inline-flex;
@@ -373,15 +378,18 @@ body {
 				}
 			}
 
+
 			&__dates {
 				font-weight: 700;
 			}
+
 
 			&__achievements {
 				padding-left: 1.5rem;
 			}
 		}
 	}
+
 
 	&.projects {
 		display: grid;
@@ -419,6 +427,7 @@ body {
 			border: 1px solid $color-five;
 			background-color: $color-one;
 
+
 			&::after {
 				content: "";
 				width: 100%;
@@ -431,6 +440,7 @@ body {
 				z-index: -1;
 			}
 
+			
 			&:hover::after, &:focus::after {
 				background-color: $color-three;
 			}
