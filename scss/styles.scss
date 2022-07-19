@@ -385,15 +385,20 @@ a:focus {
 			}
 		}
 
+
 		.experience {
+			margin-bottom: 2rem;
+
+			
 			&__section {
 				margin-bottom: 2rem;
+
 			}
 
 
 			&__header {
 				display: flex;
-				margin-bottom: 1rem;
+				margin: 2rem 0 0.25rem 0;
 				text-transform: uppercase;
 				letter-spacing: 0.1rem;
 	
@@ -406,6 +411,10 @@ a:focus {
 					height: 1px;
 					background-color: $color-five;
 					margin-left: 0.5rem;
+				}
+
+				&:first-child {
+					margin-top: 0;
 				}
 			}
 
