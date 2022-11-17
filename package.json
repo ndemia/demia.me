@@ -4,7 +4,7 @@
   "description": "My personal website.",
   "main": "index.js",
   "scripts": {
-    "sass-dev": "sass --watch --update --style=compressed --no-source-map scss:css"
+    "build-sass": "sass --watch --update --style=compressed --no-source-map scss:css"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
     "url": "https://github.com/ndemia/demia.me/issues"
   },
   "homepage": "https://github.com/ndemia/demia.me#readme",
-  "devDependencies": {
-    "sass": "^1.51.0"
+  "dependencies": {
+    "sass": "^1.56.1"
   }
 }
