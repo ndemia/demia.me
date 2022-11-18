@@ -1,0 +1,38 @@
+.description {
+    grid-area: description;
+    padding: 1rem 0;
+
+    
+    &__text {
+        @media (min-width: 768px) {
+            width: 50%;
+        }
+    }
+
+
+    &__text:not(:last-child) {
+    	margin-bottom: 1rem;
+    }
+
+
+    &__list {
+        padding-left: 2rem;
+
+
+        &--links {
+            margin-top: 0.5rem;
+            list-style-type: none;
+
+            .description__link {
+                display: inline-flex;
+                align-items: center;
+            }
+
+            .link__icon {
+                width: 1rem;
+                height: 1rem;
+                margin-right: 0.25rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+@use '../abstracts' as *;
+@use '../base' as *;
+@use '../components' as *;
+@use '../layout' as *;
+
+.resume {
+    @media (min-width: 768px) {
+        grid-template-rows: repeat(7, min-content);
+        grid-template-areas:
+        "navigation navigation"
+        "header header"
+        "description description"
+        "experience experience"
+        "education education"
+        "skills skills"
+        "footer footer";
+    }
+
+    .description__list {
+        padding-left: 0;
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+
+    .description__item {
+        margin-right: 1rem;
+    }
+
+    .description__link {
+        border: 1px solid transparent;
+        padding: 0.25rem 0.5rem;
+
+        &:focus {
+            border: 1px solid $color-five;
+            background-color: $color-three;
+            color: $color-five;
+
+            svg {
+                fill: $color-five;
+            }
+        }
+        
+        svg {
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.3rem;
+            color: $color-five;
+        }
+    }
+
+
+    .experience {
+        margin-bottom: 2rem;
+
+        
+        &__section {
+            margin-bottom: 2rem;
+
+        }
+
+
+        &__header {
+            display: flex;
+            margin: 2rem 0 0.25rem 0;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+
+
+            &::after {
+                content: "";
+                display: inline-flex;
+                align-self: center;
+                width: 100%;
+                height: 1px;
+                background-color: $color-five;
+                margin-left: 0.5rem;
+            }
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+
+        
+        &__details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 0.35rem;
+
+            @media (min-width: 512px) {
+                flex-direction: row;
+            }
+        }
+
+        &__dates-container {
+            text-align: right;
+        }
+
+
+        &__dates {
+            font-weight: 700;
+        }
+
+
+        &__achievements {
+            padding-left: 1.5rem;
+        }
+    }
+}
