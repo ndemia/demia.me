@@ -2,11 +2,8 @@
     grid-area: description;
     padding: 1rem 0;
 
-    
-    &__text {
-        @media (min-width: 768px) {
-            width: 50%;
-        }
+    @media (min-width: 1024px) {
+        width: 50%;
     }
 
 

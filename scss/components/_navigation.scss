@@ -8,21 +8,14 @@
     border-top: 1px solid $color-five;
     border-bottom: 1px solid $color-five;
 
-
-    @media (min-width: 768px) {
-        width: 100%;
-        flex-direction: row;
-    }
-
-
     &__menu {
         width: 100%;
         display: inline-flex;
         list-style-type: none;
 
         
-        @media (min-width: 786px) {
-            width: 45%;
+        @media (min-width: 1024px) {
+            width: 50%;
         }
     }
 
