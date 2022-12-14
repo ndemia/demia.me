@@ -32,15 +32,6 @@
 	font-display: swap;
 }
 
-*,
-*::before,
-*::after {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
-	outline: none;
-	transition: all 150ms linear;
-}
 
 body {
 	font-family: "Bitter", "Georgia", serif;
@@ -48,8 +39,4 @@ body {
 	line-height: 1.5;
 	color: $color-five;
 	background-color: $color-one;
-}
-
-a:focus {
-	box-shadow: 0 0 0 3px hsla(240, 27%, 18%, 0.4);
 }

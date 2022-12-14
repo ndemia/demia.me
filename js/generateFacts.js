@@ -1,3 +1,5 @@
+const factsList = document.querySelector('.description__list');
+
 // Create the random list of facts to show in my About page
 const generateRandomFacts = function () {
 
@@ -76,15 +78,26 @@ const generateRandomFacts = function () {
 			for (let i = 0; i < factsIndexArr.length; i++) {
 			
 				// Use that value to pair it to a fact, and show them in the UI
-				document.querySelector('.description__list')
-					.insertAdjacentHTML('afterbegin', `<li class="description__item">${facts[factsIndexArr[i]]}</li>`);
+				factsList.insertAdjacentHTML('afterbegin', `<li class="description__item">${facts[factsIndexArr[i]]}</li>`);
 			}
 			
 		})	
 		.catch((err) => {
-			document.querySelector('.description__list').insertAdjacentHTML('afterbegin', `<li class="description__item">Here should appear a list of random facts about me, but instead you see this error. And I just wanted us to know each other a little better :)</li>`);
+			factsList.insertAdjacentHTML('afterbegin', `<li class="description__item">Here should appear a list of random facts about me, but instead you see this error. And I just wanted us to know each other a little better :)</li>`);
 		});
 
 };
 
-document.addEventListener('DOMContentLoaded', generateRandomFacts());
+const getNewFacts = function (e) {
+
+	// Remove previous facts from the list to make place for the new ones
+	while (factsList.firstChild) {
+		factsList.removeChild(factsList.firstChild);
+	};
+
+	generateRandomFacts();
+
+};
+
+document.addEventListener('DOMContentLoaded', generateRandomFacts);
+document.querySelector('.btn--facts').addEventListener('click', getNewFacts);

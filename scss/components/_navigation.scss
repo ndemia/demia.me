@@ -46,6 +46,7 @@
         &:hover, &:focus {
             background-color: $color-three;
             color: $color-five;	
+            box-shadow: 0 0 0 3px hsla(240, 27%, 18%, 0.4);
         }
     }
 

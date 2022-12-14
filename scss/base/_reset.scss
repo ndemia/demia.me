@@ -2,7 +2,11 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	outline: none;
+	transition: all 150ms linear;
 }
 
 /* Remove default margin */
