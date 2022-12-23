@@ -1,0 +1,9 @@
+.list--horizontal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin-top: 1rem;
+}
