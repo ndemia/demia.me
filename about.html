@@ -1,75 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="favicon.ico" sizes="any">
-	<link rel="icon" href="favicon-black.svg" type="image/svg+xml">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<title>Nicolás Demianiw | About me</title>
-</head>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="icon" href="favicon-black.svg" type="image/svg+xml" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <title>Nicolás Demianiw | About me</title>
+  </head>
 
-<body>
+  <body>
+    <div id="skip-navigation">
+      <a href="#maincontent">Skip navigation</a>
+    </div>
 
-	<div id="skip-navigation">
-		<a href="#maincontent">Skip navigation</a>
-	</div>
+    <div class="grid about">
+      <nav aria-label="Main menu" class="navigation">
+        <ul class="navigation__menu">
+          <li class="navigation__item">
+            <a class="navigation__link" href="index.html">Home</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--active" href="about.html">About</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="projects.html">Projects</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
 
-	<div class="grid about">
+      <header id="maincontent" class="header">
+        <h1 class="header__title">About me</h1>
+      </header>
 
-		<nav aria-label="Main menu" class="navigation">
-			<ul class="navigation__menu">
-				<li class="navigation__item">
-					<a class="navigation__link" href="index.html">Home</a>
-				</li>
-				<li class="navigation__item">
-					<a class="navigation__link navigation__link--active" href="about.html">About</a>
-				</li>
-				<li class="navigation__item">
-					<a class="navigation__link" href="projects.html">Projects</a>
-				</li>
-				<li class="navigation__item">
-					<a class="navigation__link" href="cv.html">CV</a>
-				</li>
-				<li class="navigation__item">
-					<a class="navigation__link" href="contact.html">Contact</a>
-				</li>
-			</ul>
-		</nav>
+      <aside class="aside">
+        <figure class="description__photo">
+          <img src="assets/images/eu-2022.jpg" alt="The author of this website smiling for the camera." />
+        </figure>
+      </aside>
 
-		<header id="maincontent" class="header">
-			<h1 class="header__title">About me</h1>
-		</header>
+      <article class="description">
+        <h4 class="description__subtitle">Some facts about me:</h4>
+        <ul class="description__list"></ul>
+        <button class="btn btn--secondary btn--facts">Get new facts!</button>
+      </article>
 
-		<aside class="aside">
-			<figure class="description__photo">
-				<img src="assets/images/eu-2022.jpg" alt="The author of this website smiling for the camera." >
-			</figure>
-		</aside>
+      <footer class="footer">
+        <div class="footer__item-container">
+          <p class="footer__item--highlight">Currently reading:</p>
+          <p><span class="book"></span>, by <span class="author"></span></p>
+        </div>
+        <div class="footer__item-container footer__item-container--last">
+          <p class="footer__item--highlight">Latest commit's soundtrack:</p>
+          <p><span class="band"></span> - <span class="album"></span></p>
+        </div>
+        <div class="footer__item-container">
+          <span>© 2022. Made with 🍺 in Amsterdam.</span>
+        </div>
+      </footer>
+    </div>
 
-		<article class="description">
-			<h4 class="description__subtitle">Some facts about me:</h4>
-			<ul class="description__list"></ul>
-			<button class="btn btn--secondary btn--facts">Get new facts!</button>
-		</article>
-		
-		<footer class="footer">
-			<div class="footer__item-container">
-				<p class="footer__item--highlight">Currently reading:</p>
-				<p><span class="book"></span>, by <span class="author"></span></p>
-			</div>
-			<div class="footer__item-container footer__item-container--last">
-				<p class="footer__item--highlight">Latest commit's soundtrack:</p>
-				<p><span class="band"></span> - <span class="album"></span></p>
-			</div>
-			<div class="footer__item-container">
-				<span>© 2022. Made with 🍺 in Amsterdam.</span>
-			</div>
-		</footer>
-		
-	</div>
-
-	<script src="js/generateFacts.js"></script>
-	<script type="module" src="js/script.js"></script>
-</body>
+    <script src="js/generateFacts.js"></script>
+    <script type="module" src="js/script.js"></script>
+  </body>
 </html>
