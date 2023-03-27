@@ -1,24 +1,22 @@
 @use '../abstracts/variables' as *;
 
 .footer {
-    grid-area: footer;
-    padding: 1rem 0;
-    border-top: 1px solid $color-five;
-    font-size: 0.9rem;
+  grid-area: footer;
+  padding: 1rem 0;
+  border-top: 1px solid $color-five;
+  font-size: 0.9rem;
+  text-align: center;
 
+  &__item-container {
+    margin-bottom: 0.5rem;
+    color: $color-four;
+  }
 
-    &__item-container {
-        margin-bottom: 0.5rem;
-        color: $color-four;
-    }
+  &__item-container--last {
+    margin-bottom: 2rem;
+  }
 
-
-    &__item-container--last {
-        margin-bottom: 2rem;
-    }
-
-
-    &__item--highlight {
-        font-weight: 700;
-    }
+  &__item--highlight {
+    font-weight: 700;
+  }
 }
