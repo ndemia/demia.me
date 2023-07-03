@@ -46,4 +46,10 @@ emailButton.addEventListener('click', (e) => {
 	copyEmailToClipboard(clicks);
 });
 
+emailButton.addEventListener('touchstart ', (e) => {
+	e.preventDefault();
+	clicks++;
+	copyEmailToClipboard(clicks);
+});
+
 document.addEventListener('DOMContentLoaded', checkDarkMode());
