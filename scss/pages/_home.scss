@@ -1,0 +1,77 @@
+@use '../abstracts' as *;
+@use '../base/reset' as *;
+@use '../base/typography' as *;
+@use '../components/buttons' as *;
+@use '../components/description' as *;
+@use '../components/list-horizontal' as *;
+
+body {
+	font-family: 'Work Sans', sans;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: $color-one;
+	background-color: hsl(213, 26%, 20%);
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 10px solid hsl(309, 6%, 58%);
+}
+
+.main {
+	max-width: 768px;
+	margin-bottom: 2rem;
+	padding: 0 2rem;
+
+	&__title {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	&__description {
+		margin-bottom: 3rem;
+	}
+
+	&__list {
+		margin-bottom: 0.5rem;
+
+		.link {
+			animation-iteration-count: 1;
+			animation-fill-mode: forwards;
+			animation-direction: normal;
+			animation-duration: 2s;
+			animation-timing-function: cubic-bezier(0.64, 0, 0.78, 0);
+		}
+	}
+}
+
+.message {
+	height: 24px;
+	display: block;
+	margin-top: 0.5rem;
+	padding: 0 0.25rem;
+	opacity: 0;
+	transition: all 200ms ease;
+}
+
+.show {
+	opacity: 1;
+}
+
+.hide {
+	display: none;
+}
+
+.fall {
+	animation-name: fall;
+}
+
+@keyframes fall {
+	0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(10000px);
+	}
+}

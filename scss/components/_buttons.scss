@@ -7,6 +7,8 @@
 	cursor: pointer;
 	display: inline-flex;
 	align-items: center;
+	color: $color-one;
+	transition: all 200ms ease;
 
 	&--secondary {
 		padding: 0.25rem 1rem;
@@ -16,9 +18,12 @@
 
 		&:hover,
 		&:focus {
-			background-color: $color-three;
+			background-color: $color-two;
 			color: $color-five;
-			box-shadow: 0 0 0 3px hsla(240, 27%, 18%, 0.4);
+
+			.btn__icon {
+				fill: $color-five;
+			}
 		}
 	}
 
@@ -26,5 +31,7 @@
 		width: 1rem;
 		height: 1rem;
 		margin-right: 0.5rem;
+		fill: $color-one;
+		transition: all 200ms ease;
 	}
 }

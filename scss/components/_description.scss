@@ -1,24 +1,17 @@
 .description {
-    grid-area: description;
-    padding: 1rem 0;
+	grid-area: description;
 
-    @media (min-width: 1024px) {
-        width: 50%;
-    }
+	@media (min-width: 1024px) {
+		width: 50%;
+	}
 
+	&__text:not(:last-child) {
+		margin-bottom: 1rem;
+	}
 
-    &__text:not(:last-child) {
-    	margin-bottom: 1rem;
-    }
-
-
-    &__list {
-        padding-left: 2rem;
-        margin-bottom: 1rem;
-
-        &--links {
-            margin-top: 0.5rem;
-            list-style-type: none;
-        }
-    }
+	&__list {
+		&--links {
+			list-style-type: none;
+		}
+	}
 }

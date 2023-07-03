@@ -4,60 +4,59 @@
 @use '../layout' as *;
 
 .about {
-    grid-template-columns: inherit;
+	grid-template-columns: inherit;
 
-    @media (min-width: 768px) {
-        grid-template-columns: 200px auto;
-        grid-template-areas:
-            "navigation navigation"
-            "header header"
-            "aside description"
-            "footer footer";
-        column-gap: 2rem;
-    }
+	@media (min-width: 768px) {
+		grid-template-columns: 200px auto;
+		grid-template-areas:
+			'navigation navigation'
+			'header header'
+			'aside description'
+			'footer footer';
+		column-gap: 2rem;
+	}
 
-    .aside {
-        grid-area: aside;
-        padding-top: 1rem;
-        margin-bottom: 2rem;
-        
-        .description__photo {
-            position: relative;
-            display: inline-block;
+	.aside {
+		grid-area: aside;
+		padding-top: 1rem;
+		margin-bottom: 2rem;
 
-            img {
-                width: 150px;
-                height: 150px;
-                border: 1px solid $color-five;
+		.description__photo {
+			position: relative;
+			display: inline-block;
 
-                @media (min-width: 768px) {
-                    width: 200px;
-                    height: 200px;
-                }
-            }
+			img {
+				width: 150px;
+				height: 150px;
+				border: 1px solid $color-five;
 
-            &::after {
-                content: "";
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 8px;
-                left: 8px;
-                z-index: -1;
-                border: 1px solid $color-five;
-                background-color: $color-two;
-            }
+				@media (min-width: 768px) {
+					width: 200px;
+					height: 200px;
+				}
+			}
 
+			&::after {
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 8px;
+				left: 8px;
+				z-index: -1;
+				border: 1px solid $color-five;
+				background-color: $color-two;
+			}
 
-            &:hover::after {
-                background-color: $color-three;
-            }
-        }
-    }
+			&:hover::after {
+				background-color: $color-three;
+			}
+		}
+	}
 
-    .description {
-        @media (min-width: 1024px) {
-            width: 65%;
-        }
-    }
+	.description {
+		@media (min-width: 1024px) {
+			width: 65%;
+		}
+	}
 }
