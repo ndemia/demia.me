@@ -1,5 +1,4 @@
 import { checkDarkMode } from './checkDarkMode.js';
-import { updateBooksAndMusic } from './updateBooksAndMusic.js';
 
 const emailButton = document.querySelector('.js-button-email');
 const message = document.querySelector('.message');
@@ -24,6 +23,8 @@ const showMessage = (messageType, clicks) => {
 		emailButton.classList.add('fall');
 		setTimeout(() => {
 			emailButton.classList.add('hide');
+			message.classList.add('show');
+			message.innerText = `Told ya 🤷‍♂️`;
 		}, 2000);
 	} else {
 		message.innerText = `Hmmm, my e-mail was not copied. Better try again.`;
