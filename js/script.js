@@ -24,7 +24,7 @@ const showMessage = (messageType, clicks) => {
 		setTimeout(() => {
 			emailButtonContainer.classList.add('hide');
 			message.classList.add('show');
-			message.innerText = `Told ya 🤷‍♂️`;
+			message.innerText = `Told ya 🤷‍♂️. Under construction, everything is fragile.`;
 		}, 2000);
 	} else {
 		message.innerText = `Hmmm, my e-mail was not copied. Better try again.`;
