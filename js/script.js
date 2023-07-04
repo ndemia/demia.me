@@ -40,7 +40,7 @@ const copyEmailToClipboard = async (clicks) => {
 	}
 };
 
-emailButton.addEventListener('pointerdown', () => {
+emailButton.addEventListener('touchstart', () => {
 	clicks++;
 	copyEmailToClipboard(clicks);
 });
