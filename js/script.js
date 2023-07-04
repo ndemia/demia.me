@@ -42,9 +42,8 @@ const copyEmailToClipboard = async (clicks) => {
 
 emailButton.addEventListener('pointerdown', (e) => {
 	e.preventDefault();
-	// clicks++;
-	// copyEmailToClipboard(clicks);
-	document.querySelector('body').style.backgroundColor = 'red';
+	clicks++;
+	copyEmailToClipboard(clicks);
 });
 
 document.addEventListener('DOMContentLoaded', checkDarkMode());
