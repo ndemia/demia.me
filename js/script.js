@@ -40,16 +40,15 @@ const copyEmailToClipboard = async (clicks) => {
 	}
 };
 
-emailButton.addEventListener('click', (e) => {
-	e.preventDefault();
+emailButton.addEventListener('pointerup', () => {
 	clicks++;
 	copyEmailToClipboard(clicks);
 });
 
-emailButton.addEventListener('touchstart ', (e) => {
-	e.preventDefault();
-	clicks++;
-	copyEmailToClipboard(clicks);
-});
+// emailButton.addEventListener('touchstart ', (e) => {
+// 	e.preventDefault();
+// 	clicks++;
+// 	copyEmailToClipboard(clicks);
+// });
 
 document.addEventListener('DOMContentLoaded', checkDarkMode());

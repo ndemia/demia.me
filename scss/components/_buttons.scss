@@ -11,10 +11,10 @@
 	transition: all 200ms ease;
 
 	&--secondary {
-		padding: 0.25rem 1rem;
-		border: 1px solid $color-three;
+		padding: 0.25rem 0.5rem;
 		font-family: 'Work Sans', sans-serif;
-		text-decoration: none;
+		text-decoration: underline;
+		//margin-right: 0.5rem;
 
 		&:hover,
 		&:focus {

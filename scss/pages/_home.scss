@@ -41,7 +41,7 @@ body {
 			animation-iteration-count: 1;
 			animation-fill-mode: forwards;
 			animation-direction: normal;
-			animation-duration: 2s;
+			animation-duration: 1.5s;
 			animation-timing-function: cubic-bezier(0.64, 0, 0.78, 0);
 		}
 	}
@@ -69,10 +69,10 @@ body {
 }
 
 @keyframes fall {
-	0% {
-		transform: translateY(0);
+	from {
+		transform: rotate(-5deg) translateY(0);
 	}
-	100% {
-		transform: translateY(10000px);
+	to {
+		transform: translateY(1000px);
 	}
 }
