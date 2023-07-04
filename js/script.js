@@ -1,6 +1,6 @@
 import { checkDarkMode } from './checkDarkMode.js';
 
-const emailButton = document.querySelector('.js-button-container');
+const emailButtonContainer = document.querySelector('.js-button-container');
 const message = document.querySelector('.message');
 let clicks = 0;
 
@@ -20,9 +20,9 @@ const showMessage = (messageType, clicks) => {
 			message.classList.remove('show');
 		}, 3000);
 	} else if (messageType === 'success' && clicks >= 3) {
-		emailButton.classList.add('fall');
+		emailButtonContainer.classList.add('fall');
 		setTimeout(() => {
-			emailButton.classList.add('hide');
+			emailButtonContainer.classList.add('hide');
 			message.classList.add('show');
 			message.innerText = `Told ya 🤷‍♂️`;
 		}, 2000);
@@ -40,7 +40,7 @@ const copyEmailToClipboard = async (clicks) => {
 	}
 };
 
-emailButton.addEventListener('pointerdown', () => {
+document.querySelector('.js-button-email').addEventListener('pointerdown', () => {
 	//e.preventDefault();
 	clicks++;
 	copyEmailToClipboard(clicks);
