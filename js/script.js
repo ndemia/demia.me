@@ -1,6 +1,6 @@
 import { checkDarkMode } from './checkDarkMode.js';
 
-const emailButton = document.querySelector('.js-button-email');
+const emailButton = document.querySelector('.js-button-container');
 const message = document.querySelector('.message');
 let clicks = 0;
 
