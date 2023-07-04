@@ -19,7 +19,7 @@ const showMessage = (messageType, clicks) => {
 			message.innerText = ``;
 			message.classList.remove('show');
 		}, 3000);
-	} else if (messageType === 'success' && clicks == 3) {
+	} else if (messageType === 'success' && clicks >= 3) {
 		emailButton.classList.add('fall');
 		setTimeout(() => {
 			emailButton.classList.add('hide');
@@ -40,7 +40,7 @@ const copyEmailToClipboard = async (clicks) => {
 	}
 };
 
-emailButton.addEventListener('pointerup', () => {
+emailButton.addEventListener('pointerdown', () => {
 	clicks++;
 	copyEmailToClipboard(clicks);
 });
