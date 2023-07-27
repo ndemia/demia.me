@@ -1,37 +1,42 @@
-@use '../abstracts/variables' as *;
-
-.btn {
-	// Reset default browser styles
-	background-color: unset;
+.button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: none;
 	border: 0;
-	cursor: pointer;
 	display: inline-flex;
-	align-items: center;
-	color: $color-one;
-	transition: all 200ms ease;
+	cursor: pointer;
+	padding: 0.25rem;
+	transition: all 200ms ease-in-out;
 
-	&--secondary {
-		padding: 0.25rem 0.5rem;
-		font-family: 'Work Sans', sans-serif;
-		text-decoration: underline;
-		//margin-right: 0.5rem;
+	&--dos {
+		font-family: '437', monospace;
+		font-size: 1rem;
+		color: var(--amber-01);
 
-		&:hover,
+		&:hover {
+			color: var(--amber-02);
+		}
+
 		&:focus {
-			background-color: $color-two;
-			color: $color-five;
-
-			.btn__icon {
-				fill: $color-five;
-			}
+			box-shadow: 0 0 0 4px var(--beige-02);
 		}
 	}
 
-	&__icon {
-		width: 1rem;
-		height: 1rem;
-		margin-right: 0.5rem;
-		fill: $color-one;
-		transition: all 200ms ease;
+	.dos__dash {
+		opacity: 1;
+		animation-name: standby;
+		animation-duration: 1s;
+		animation-iteration-count: infinite;
+		animation-timing-function: steps(2, jump-none);
+	}
+}
+
+@keyframes standby {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
 	}
 }

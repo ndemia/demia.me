@@ -1,0 +1,151 @@
+@use '../abstracts' as *;
+
+.project {
+	&__item {
+		list-style-type: none;
+		margin-bottom: 2rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@media (min-width: 40em) {
+			margin-bottom: 0;
+		}
+	}
+
+	&__link {
+		display: block;
+		padding-bottom: 1rem;
+		text-decoration: none;
+		transition: all 200ms ease-in-out;
+
+		&:hover,
+		&:focus {
+			.project__title::after {
+				width: 100%;
+				opacity: 1;
+			}
+
+			.title__icon {
+				transform: translateX(0);
+				opacity: 1;
+			}
+
+			.project__screenshot img {
+				filter: grayscale(20%);
+			}
+
+			.project__container::after {
+				background-color: var(--grey-04);
+			}
+		}
+
+		&:focus {
+			box-shadow: 0 0 0 4px var(--beige-02);
+		}
+
+		&:active {
+			.project__screenshot {
+				top: 8px;
+				left: 8px;
+			}
+
+			.project__screenshot::after {
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__screenshot {
+		position: relative;
+		top: 0;
+		left: 0;
+		border: 1px solid var(--beige-03);
+		background-color: var(--beige-03);
+		transition: all 200ms ease-in-out;
+
+		&::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 8px;
+			left: 8px;
+			z-index: -1;
+			border: 1px solid var(--beige-03);
+			transition: all 200ms ease-in-out;
+		}
+	}
+
+	&__screenshot img {
+		display: block;
+		width: 100%;
+		filter: grayscale(60%);
+		transition: filter 200ms ease-in-out;
+	}
+
+	&__information {
+		padding: 1rem 1rem 0 0.5625rem;
+		color: var(--beige-01);
+	}
+
+	&__header {
+		display: inline-flex;
+		align-items: center;
+		margin-bottom: 0.25rem;
+	}
+
+	&__title {
+		font-size: 1.2rem;
+		border-bottom: 1px solid transparent;
+		transition: all 800ms ease-in;
+
+		&::after {
+			content: '';
+			display: block;
+			width: 0;
+			height: 1px;
+			background-color: var(--beige-03);
+			opacity: 0;
+			transition: all 200ms ease-in;
+		}
+	}
+
+	.title__icon {
+		width: 1.5rem;
+		height: 1.5rem;
+		fill: var(--beige-01);
+		margin-left: 0.25rem;
+		opacity: 0;
+		transform: translateX(-15px);
+		transition: all 200ms ease-in-out;
+	}
+
+	&__description {
+		color: var(--beigegrey-01);
+		margin-bottom: 1.2rem;
+	}
+
+	&__tags {
+		display: inline-flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+
+		.tag {
+			font-size: 0.8rem;
+			font-weight: 500;
+			color: var(--beigegrey-01);
+			padding: 0.25rem 0.5rem;
+			border: 1px solid var(--beige-03);
+			letter-spacing: 0.5px;
+		}
+	}
+}

@@ -1,0 +1,53 @@
+.project {
+	.navigation {
+		padding-top: 3rem;
+
+		@media (min-width: 60em) {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 1;
+			grid-row-end: 1;
+			padding-top: 6rem;
+		}
+	}
+
+	.header {
+		@media (min-width: 60em) {
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 2;
+			grid-row-end: 2;
+			padding-top: 0;
+		}
+
+		&__title {
+			margin-bottom: 1.5rem;
+		}
+
+		&__link {
+			width: min-content;
+		}
+
+		.project__screenshot {
+			margin-bottom: 1.5rem;
+
+			img {
+				filter: none;
+			}
+		}
+	}
+
+	.description {
+		@media (min-width: 60em) {
+			grid-column-start: 2;
+			grid-column-end: 3;
+			grid-row-start: 2;
+			grid-row-end: 2;
+			padding-top: 0;
+		}
+	}
+
+	.list {
+		padding-left: 0.5625rem;
+	}
+}

@@ -1,7 +1,18 @@
-$white: hsl(0, 0%, 100%);
-$black: hsl(0, 0%, 20%);
-$color-one: hsl(21, 35%, 92%);
-$color-two: hsl(11, 24%, 72%);
-$color-three: hsl(309, 6%, 58%);
-$color-four: hsl(232, 17%, 35%);
-$color-five: hsl(240, 27%, 18%);
+:root {
+	--white: hsl(0, 0%, 100%);
+	--black: hsl(0, 0%, 10%);
+
+	--beige-01: hsl(21, 35%, 92%);
+	--beige-02: hsl(11, 24%, 72%);
+	--beige-03: hsl(309, 6%, 58%);
+
+	--beigegrey-01: hsl(60, 2%, 80%);
+
+	--grey-01: hsl(193, 26%, 35%);
+	--grey-02: hsl(193, 26%, 30%);
+	--grey-03: hsl(193, 26%, 25%);
+	--grey-04: hsl(193, 26%, 15%);
+
+	--amber-01: hsl(41, 100%, 50%);
+	--amber-02: hsl(41, 100%, 40%);
+}

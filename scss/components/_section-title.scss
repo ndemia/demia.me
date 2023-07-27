@@ -1,0 +1,12 @@
+.section__title {
+	width: fit-content;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 0.3rem;
+	border-bottom: 1px solid var(--beige-03);
+
+	&--project {
+		margin-bottom: 1rem;
+	}
+}

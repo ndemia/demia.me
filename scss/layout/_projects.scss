@@ -1,0 +1,16 @@
+@use '../abstracts' as *;
+@use '../components/project-item';
+
+.project {
+	padding: 0 1rem 1rem 1rem;
+
+	&__list {
+		@media (min-width: 40em) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, min-content);
+			gap: 2rem;
+			padding: 0;
+		}
+	}
+}

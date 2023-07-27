@@ -1,0 +1,27 @@
+.list {
+	&--description {
+		margin-top: 2rem;
+
+		.list__item {
+			padding: 0.15rem 0;
+		}
+	}
+
+	&__element,
+	&__item {
+		list-style-type: none;
+	}
+}
+
+.socials {
+	&__list {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+
+		@media (min-width: 25em) {
+			gap: 1rem;
+		}
+	}
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Personal website for Nicolás Demianiw. UI Designer & Developer based in The Netherlands." />
+		<link rel="icon" href="favicon.ico" sizes="any" />
+		<link rel="icon" href="favicon-black.svg" type="image/svg+xml" />
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<title>Marketplace - Nicolás Demianiw</title>
+	</head>
+	<body>
+		<div class="container project">
+			<nav class="navigation project__navigation">
+				<a class="header__link link" href="/index.html">
+					<svg class="link__icon header__icon" viewBox="0 0 24 24" aria-hidden="true">
+						<path d="M6.914,13L21,13L21,11L6.914,11L9.914,8L8.5,6.586L3.086,12L8.5,17.414L9.914,16L6.914,13Z" />
+					</svg>
+					Back
+				</a>
+			</nav>
+			<header class="header">
+				<button class="button button--dos" aria-label="Activate DOS theme">
+					A:\>
+					<span class="dos__dash">_</span>
+				</button>
+				<div class="header__content">
+					<h1 class="header__title">Marketplace</h1>
+				</div>
+				<figure class="project__screenshot">
+					<img
+						srcset="assets/images/marketplace_x1.png 700w, assets/images/marketplace_x2.png 1280w"
+						sizes="(min-width: 960px) 1280px, 700px"
+						src="assets/images/marketplace_x1.png"
+						alt="A modal window serving as a market for items."
+					/>
+				</figure>
+				<ul class="list">
+					<li class="list__element">
+						<a class="list__link link link--inline" href="https://github.com/ndemia/marketplace" target="_blank">
+							Project's GitHub (with more details)
+							<svg class="link__icon link__icon--inline" viewBox="0 0 24 24" aria-hidden="true">
+								<path
+									d="M17,14L17,20C17,20 4,20 4,20C4,20 4,6 4,6C4,6 10,6 10,6L10,4L2,4L2,22L19,22L19,14L17,14ZM18.586,4L9.586,13L11,14.414L20,5.414L20,9L22,9L22,2L15,2L15,4L18.586,4Z"
+								/>
+							</svg>
+						</a>
+					</li>
+					<li class="list__element">
+						<a class="list__link link link--inline" href="https://ndemia.github.io/marketplace/" target="_blank">
+							Live demo
+							<svg class="link__icon link__icon--inline" viewBox="0 0 24 24" aria-hidden="true">
+								<path
+									d="M17,14L17,20C17,20 4,20 4,20C4,20 4,6 4,6C4,6 10,6 10,6L10,4L2,4L2,22L19,22L19,14L17,14ZM18.586,4L9.586,13L11,14.414L20,5.414L20,9L22,9L22,2L15,2L15,4L18.586,4Z"
+								/>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</header>
+
+			<section class="description">
+				<article class="description__article" aria-label="Project's description">
+					<h3 class="section__title description__title">Context</h3>
+					<p class="description__text">
+						As part of my learning process, and escape tutorial hell, I decided to rebuild all the programming assignments I received over time. This
+						one being the most difficult one yet. It's been a great way to recognise, understand, and correct the mistakes I made the first time
+						around. And also, just a great opportunity to improve my skills and see my progress.
+					</p>
+					<p class="description__text">
+						This assignment came with a pre-built part. The rest was meant to be built following some design guidelines and a set of
+						<a class="link link--inline" href="https://github.com/ndemia/marketplace#pre-built-part" target="_blank">
+							implementation requirements.
+							<svg class="link__icon link__icon--inline" viewBox="0 0 24 24" aria-hidden="true">
+								<path
+									d="M17,14L17,20C17,20 4,20 4,20C4,20 4,6 4,6C4,6 10,6 10,6L10,4L2,4L2,22L19,22L19,14L17,14ZM18.586,4L9.586,13L11,14.414L20,5.414L20,9L22,9L22,2L15,2L15,4L18.586,4Z"
+								/>
+							</svg>
+						</a>
+						I kept them, of course, but decided to replace the design with a medieval theme just for fun :)
+					</p>
+					<h3 class="section__title description__title">Tech stack</h3>
+					<p class="description__text">HTML, CSS (SASS), TypeScript.</p>
+
+					<h3 class="section__title description__title">Process</h3>
+					<p class="description__text">
+						The assignment was meant to be completed with JQuery, but since I'm learning JavaScript, I decided to replace it. It worked, but it was
+						far from ideal due to my lack of knowledge at the time. It's now been rebuilt using TypeScript.
+					</p>
+					<h3 class="section__title description__title">Problems</h3>
+					<p class="description__text">
+						The first time I did this project I didn't comprehend that the "database" worked as an API, and replaced it with a Class. It worked, but
+						it was not the original intention. For this new iteration, I corrected this mistake, and reverted to the original code. It didn't come
+						without its challenges.
+					</p>
+					<p class="description__text">
+						The API handled requests for each information individually, which makes sense: you request the user, or you request the stock. Each
+						request has a 1 in 3 chances to fail (by design). A lot of the checks during the purchasing process depend on this calls to validate the
+						available item quantity. As well as the item's price, specially when calculating total prices. With so many checks, calls, and potential
+						failures, the challenge was to keep calls to a minimun. Which I managed to achieve! Once that was done successfully, I just passed that
+						information around between the functions or elements that would need it.
+					</p>
+					<h3 class="section__title description__title">Accessibility</h3>
+					<p class="description__text">
+						I learned about the
+						<span class="bold">inert</span>
+						attribute (and its polyfill), and how to use it to 'disable' parts of the website so that they are not keyboard accessible. In this
+						particular case, disabling the 'back' of the website while the modal is open.
+					</p>
+					<p class="description__text">
+						I also got familiar with
+						<span class="bold">'aria-live'</span>
+						and
+						<span class="bold">'role'</span>
+						attributes so that screen readers can announce changes in the UI. For example, prices updating, alerts and error messages.
+					</p>
+					<p class="description__text">And finally, I got more comfortable with aria-label, aria-hidden, and improving keyboard navigation.</p>
+					<h3 class="section__title description__title">Learnings</h3>
+					<p class="description__text">
+						TypeScript allowed me to better understand JavaScript. I has also helped me write better, more structered code.
+					</p>
+					<p class="description__text">
+						I got more comfortable with promises and asynchronous JavaScript, as well as with handling errors, and managing the flow of information,
+						among other things.
+					</p>
+				</article>
+			</section>
+
+			<footer class="footer">
+				<div class="currently" aria-label="What I'm currently enjoying">
+					<div class="currently__item-container">
+						<p class="currently__item--highlight">Currently reading:</p>
+						<p class="currently__item">
+							<span class="book italic"></span>
+							by
+							<span class="author"></span>
+						</p>
+					</div>
+					<div class="currently__item-container">
+						<p class="currently__item--highlight">Latest commit's soundtrack:</p>
+						<p class="currently__item">
+							<span class="band"></span>
+							-
+							<span class="album"></span>
+						</p>
+					</div>
+					<div class="currently__item-container">
+						<span class="made">Handmade with 🍺 in Amsterdam by yours truly.</span>
+					</div>
+					<div class="currently__item-container hidden firefox">
+						<span>
+							We recommend that you use
+							<a class="link link--inline" target="_blank" rel="noopener noreferrer" href="https://firefox.com/" aria-label="Get Firefox">
+								Firefox,
+								<svg class="link__icon link__icon--inline" viewBox="0 0 24 24" aria-hidden="true">
+									<path
+										d="M17,14L17,20C17,20 4,20 4,20C4,20 4,6 4,6C4,6 10,6 10,6L10,4L2,4L2,22L19,22L19,14L17,14ZM18.586,4L9.586,13L11,14.414L20,5.414L20,9L22,9L22,2L15,2L15,4L18.586,4Z"
+									/>
+								</svg>
+							</a>
+							a web browser that respects your privacy.
+						</span>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<script type="module" src="js/script.js"></script>
+	</body>
+</html>

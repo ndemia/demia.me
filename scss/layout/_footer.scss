@@ -1,22 +1,37 @@
-@use '../abstracts/variables' as *;
+@use '../abstracts' as *;
 
 .footer {
-  grid-area: footer;
-  padding: 1rem 0;
-  border-top: 1px solid $color-five;
-  font-size: 0.9rem;
-  text-align: center;
+	@media (min-width: 60em) {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		grid-row-start: 3;
+		grid-row-end: 3;
+	}
+}
 
-  &__item-container {
-    margin-bottom: 0.5rem;
-    color: $color-four;
-  }
+.currently {
+	padding: 1rem 0;
+	font-size: 0.9rem;
+	border-top: 1px solid var(--beige-03);
 
-  &__item-container--last {
-    margin-bottom: 2rem;
-  }
+	&__item-container {
+		margin-bottom: 0.5rem;
+	}
 
-  &__item--highlight {
-    font-weight: 700;
-  }
+	&__item-container:nth-child(2) {
+		margin-bottom: 2.5rem;
+	}
+
+	&__item--highlight {
+		letter-spacing: 0.5px;
+		color: var(--beige-02);
+	}
+}
+
+.italic {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: 700;
 }
