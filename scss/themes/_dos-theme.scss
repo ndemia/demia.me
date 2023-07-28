@@ -4,6 +4,12 @@
 .dos-theme {
 	font-size: 1.1rem;
 
+	& * > *,
+	& * > *::before,
+	& * > *::after {
+		transition: none !important;
+	}
+
 	body {
 		font-family: '437', monospace;
 		color: var(--amber-01);
@@ -53,8 +59,11 @@
 		border-color: var(--amber-01);
 
 		&::after {
-			background-color: var(--amber-01);
 			border: 0;
+			background-image: url(../../assets/images/pixel.png);
+			background-repeat: repeat;
+			background-blend-mode: luminosity;
+			background-color: var(--amber-01);
 		}
 	}
 
