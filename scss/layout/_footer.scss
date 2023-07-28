@@ -1,6 +1,8 @@
 @use '../abstracts' as *;
 
 .footer {
+	padding: 0 1rem;
+
 	@media (min-width: 60em) {
 		grid-column-start: 1;
 		grid-column-end: 3;

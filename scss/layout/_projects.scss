@@ -2,8 +2,6 @@
 @use '../components/project-item';
 
 .project {
-	padding: 0 1rem 1rem 1rem;
-
 	&__list {
 		@media (min-width: 40em) {
 			display: grid;
