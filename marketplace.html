@@ -35,7 +35,7 @@
 						alt="A modal window serving as a market for items."
 					/>
 				</figure>
-				<ul class="list">
+				<ul class="list list--links">
 					<li class="list__element">
 						<a class="list__link link link--inline" href="https://github.com/ndemia/marketplace" target="_blank">
 							Project's GitHub
@@ -63,30 +63,51 @@
 				<article class="description__article">
 					<h3 class="section__title description__title">Context</h3>
 					<p class="description__text">
-						As part of my learning process, and escape tutorial hell, I decided to rebuild all the programming assignments I received over time. This
-						one being the most difficult one yet. It's been a great way to recognise, understand, and correct the mistakes I made the first time
-						around. And also, just a great opportunity to improve my skills and see my progress.
+						Until now, this assignment has been the most difficult one. It's great to say that I've been able to correct a lot of previous mistakes
+						that I've made in the first iteration of this project.
 					</p>
-					<p class="description__text">
-						This assignment came with a pre-built part. The rest was meant to be built following some design guidelines and a set of
-						<a class="link link--inline" href="https://github.com/ndemia/marketplace#pre-built-part" target="_blank">
-							implementation requirements.
-							<svg class="link__icon link__icon--inline" viewBox="0 0 24 24" aria-hidden="true">
-								<path
-									d="M17,14L17,20C17,20 4,20 4,20C4,20 4,6 4,6C4,6 10,6 10,6L10,4L2,4L2,22L19,22L19,14L17,14ZM18.586,4L9.586,13L11,14.414L20,5.414L20,9L22,9L22,2L15,2L15,4L18.586,4Z"
-								/>
-							</svg>
-						</a>
-						I kept them, of course, but decided to replace the design with a medieval theme just for fun :)
-					</p>
+					<h3 class="section__title description__title">Design</h3>
+					<p class="description__text">A design was provided, but I decided to ditch it and make a more fun one instead :)</p>
 					<h3 class="section__title description__title">Tech stack</h3>
 					<p class="description__text">HTML, CSS (SASS), TypeScript.</p>
-
-					<h3 class="section__title description__title">Process</h3>
+					<h3 class="section__title description__title">Pre-built part</h3>
+					<ul class="list list--icons">
+						<li class="list__element">There is a web application with a pre-authenticated user.</li>
+						<li class="list__element">Each user has an amount of gold coins, which is shown somewhere in the top bar.</li>
+						<li class="list__element"
+							>There is a stock of items to offer, with a price in gold coins and an available amount. E.g.: 3 swords costing 35 each and 2 helmets
+							costing 12 each and so on.
+						</li>
+						<li class="list__element"
+							>For the simplicity of the setup, pre-built storage is in-memory (i.e. some static collections) and the requests to the “back-end” are
+							simulated (see service.js).
+						</li>
+					</ul>
+					<h3 class="section__title description__title">Part to be built</h3>
+					<ul class="list list--icons">
+						<li class="list__element"
+							>Make “Buy” button in the top bar show the dialog which will allow user to buy available items (to be displayed in a modal).
+						</li>
+						<li class="list__element"
+							>User can see available items and their price, can type in an amount to buy (integer value), or increment/decrement it with buttons +
+							and -. Total cost is calculated in real-time and reflects changes to the amount.
+						</li>
+						<li class="list__element">If the total cost exceeds available money, message appears and buy button is disabled.</li>
+						<li class="list__element"
+							>When user clicks 'Buy', dialog is closed, item stocks are updated and user balance is updated. There is no need to store bought items.
+						</li>
+						<li class="list__element">User can also close the dialog via cancel or close buttons.</li>
+						<li class="list__element"
+							>Make sure constraints with regard to number of items available and user balance are not violated. Make sure feedback is available to
+							users if they cannot accomplish the action (e.g. item is no longer available or a request to the backend fails).
+						</li>
+						<li class="list__element"
+							>A 'random' failure request is implemented for the “Buy” request (e.g. once every 3 requests) and the failure is handled.
+						</li>
+					</ul>
+					<!-- <h3 class="section__title description__title">Process</h3>
 					<p class="description__text">
-						The assignment was meant to be completed with JQuery, but since I'm learning JavaScript, I decided to replace it. It worked, but it was
-						far from ideal due to my lack of knowledge at the time. It's now been rebuilt using TypeScript.
-					</p>
+					</p> -->
 					<h3 class="section__title description__title">Problems</h3>
 					<p class="description__text">
 						The first time I did this project I didn't comprehend that the "database" worked as an API, and replaced it with a Class. It worked, but

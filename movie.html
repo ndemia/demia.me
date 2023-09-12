@@ -35,7 +35,7 @@
 						alt="Movie search results."
 					/>
 				</figure>
-				<ul class="list">
+				<ul class="list list--links">
 					<li class="list__element">
 						<a class="list__link link link--inline" href="https://github.com/ndemia/movie-search" target="_blank">
 							Project's GitHub
@@ -63,26 +63,45 @@
 				<article class="description__article">
 					<h3 class="section__title description__title">Context</h3>
 					<p class="description__text">
-						Another of my failed interview test series. I applied for a position at a company I was dying to work for. This time around, I did manage
-						to pass the technical assessment! With some good parts and some bad parts, of course. But in the end, I didn't pass the penultimate
-						interview.
+						Another of my interview test series. This time around, I did manage to pass the technical assessment! With some good parts and some bad
+						parts, of course.
 					</p>
-
 					<h3 class="section__title description__title">Tech stack</h3>
 					<p class="description__text">HTML, CSS (SASS), TypeScript.</p>
-
-					<h3 class="section__title description__title">Process</h3>
-					<p class="description__text">
-						The assignment was meant to be completed in JavaScript, without any frameworks or tools, just plain vanilla. I've rebuilt it using
-						TypeScript to improve it wherever I could, and to get more familiar with it.
-					</p>
+					<h3 class="section__title description__title">Requirements</h3>
+					<ul class="list list--icons">
+						<li class="list__element"
+							>The assignment was meant to be completed in vanilla JavaScript, without any frameworks or libraries. I've rebuilt it using TypeScript,
+							improving it wherever I could, and to get more familiar with it.
+						</li>
+						<li class="list__element"
+							>I was not allowed to use any framework to make the request (Axios or similar). UI frameworks were allowed but highly discouraged.
+						</li>
+						<li class="list__element">Mobile-first approach.</li>
+						<li class="list__element"
+							>Each result should have its own card (or among those lines, can't remember exactly as it was long ago and I haven't kept the
+							documentation).
+						</li>
+						<li class="list__element"
+							>There has to be a top bar, where the search box will be located. I'm going to ditch this, just to have more flexibility :)
+						</li>
+					</ul>
 					<h3 class="section__title description__title">Problems</h3>
-					<p class="description__text">
-						It was my first time dealing with pagination and I found it the most dificult part. I had to rely on third party solutions to accomplish
-						it. But not before understanding how it worked ;)
+					<p class="description__text"
+						>It was my first time dealing with pagination and it was the most dificult part. I had to rely on a third party solution to accomplish it,
+						but not before understanding how it works. Although I do need to practice it more often ;)
+					</p>
+					<p class="description__text"
+						>Dealing with the card layout was also tricky, since there's always going to be some undesired whitespace, whether inside the car to match
+						all the heights, or outside to avoid it. I chose the latter one.
+					</p>
+					<p class="description__text"
+						>Learning how to manage and hide the API key, in order to be able to publish the project on GitHub, also took some time to properly grasp.
 					</p>
 					<h3 class="section__title description__title">Learnings</h3>
 					<p class="description__text">I got more comfortable with promises and asynchronous JavaScript in general, as well as with TypeScript.</p>
+					<p class="description__text">Learned about Netlify, hiding API keys in environment variables, and deploying to it.</p>
+					<p class="description__text">Getting more familiar with testing accessibility, with keyboard navigation and screen-readers.</p>
 				</article>
 			</section>
 

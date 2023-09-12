@@ -7,6 +7,20 @@
 		}
 	}
 
+	&--icons {
+		margin-bottom: 1rem;
+		padding: 0;
+		list-style-position: inside;
+
+		.list__element {
+			list-style-type: square;
+		}
+	}
+
+	&--links {
+		padding-left: 0.5625rem;
+	}
+
 	&__element,
 	&__item {
 		list-style-type: none;
