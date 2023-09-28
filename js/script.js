@@ -159,7 +159,7 @@ const changeEmojis = (theme) => {
 		if (document.querySelector('.description__greeting')) {
 			document.querySelector('.description__greeting').innerText = `Hi, I'm Nicolás! :)`;
 		}
-		document.querySelector('.made').innerText = ` Made in Amsterdam by yours truly.`;
+		document.querySelector('.made').innerText = ` Made with 🍺 in Amsterdam.`;
 	} else {
 		if (document.querySelector('.description__greeting')) {
 			document.querySelector('.description__greeting').innerText = `Hi, I'm Nicolás! 👋`;
